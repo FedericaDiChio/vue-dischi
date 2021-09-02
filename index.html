@@ -18,11 +18,11 @@
       </header>
       <main class="container">
         <section id="album-container">
-          <div v-for="item in music" class="card">
-            <img :src="item.poster" alt="poster">
-            <h2 class="title">{{item.title}}</h2>
-            <address class="author">{{item.author}}</address>
-            <time datetime="1988" class="year">{{item.year}}</time>
+          <div v-for="album in albums" class="card">
+            <img :src="album.poster" alt="poster">
+            <h2 class="title">{{album.title}}</h2>
+            <address class="author">{{album.author}}</address>
+            <time datetime="1988" class="year">{{album.year}}</time>
           </div>
         </section>
       </main>
