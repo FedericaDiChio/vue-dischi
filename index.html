@@ -18,11 +18,11 @@
       </header>
       <main class="container">
         <section id="album-container">
-          <div v-for="album in albums" class="card">
+          <div v-for="album in sortedAlbums" class="card">
             <img :src="album.poster" alt="poster">
             <h2 class="title">{{album.title}}</h2>
             <address class="author">{{album.author}}</address>
-            <time datetime="1988" class="year">{{album.year}}</time>
+            <time class="year">{{album.year}}</time>
           </div>
         </section>
       </main>
