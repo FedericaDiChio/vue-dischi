@@ -11,9 +11,8 @@ const app = new Vue({
   created(){
     axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((res) => {
       const response = res.data.response;
-      console.log(response)
+      // console.log(response)
       this.music = response;
-
     })
   }
 });

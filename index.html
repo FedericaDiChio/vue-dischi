@@ -18,13 +18,12 @@
       </header>
       <main class="container">
         <section id="album-container">
-          <div v-for="item in music"class="card">
-            <img src="images/demo.jpg" alt="New Jersey" />
+          <div v-for="item in music" class="card">
+            <img :src="item.poster" alt="poster">
             <h2 class="title">{{item.title}}</h2>
-            <address class="author">Bon Jovi</address>
-            <time datetime="1988" class="year">1988</time>
+            <address class="author">{{item.author}}</address>
+            <time datetime="1988" class="year">{{item.year}}</time>
           </div>
-          
         </section>
       </main>
     </div>
