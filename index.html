@@ -19,10 +19,10 @@
       <main class="container">
         <section id="album-container">
           <div v-for="album in sortedAlbums" class="card">
-            <img :src="album.poster" alt="poster">
-            <h2 class="title">{{album.title}}</h2>
+            <img :src="album.poster" :alt="album.title">
+            <h2 class="title">{{album.title.toUpperCase()}}</h2>
             <address class="author">{{album.author}}</address>
-            <time class="year">{{album.year}}</time>
+            <time :datetime="album.year" class="year">{{album.year}}</time>
           </div>
         </section>
       </main>

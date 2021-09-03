@@ -7,7 +7,8 @@ const app = new Vue({
   data: {
     albums: [],
   },
-  methods: {},
+  methods: {
+  },
   computed: {
     sortedAlbums(){
       return this.albums.sort((a, b) => a.year - b.year);
@@ -15,11 +16,10 @@ const app = new Vue({
     },
     created(){
       axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((res) => {
-        const response = res.data.response;
+        // const response = res.data.response;
         // console.log(response)
-        this.albums = response;
+        this.albums = res.data.response;
       })
     }
   });
   
-  console.log(this.sortedAlbums)
